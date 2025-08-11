@@ -55,7 +55,7 @@ func (u *userRouter) create(c *gin.Context) {
 
 func (u *userRouter) get(c *gin.Context) {
 	u.router.okResponse(c, &types.GetUserResponse{
-		ApiResponse: types.NewApiResponse(1, "성공", nil),
+		ApiResponse: types.NewApiResponse(1, "성공 확인", nil),
 		Users:       u.userService.Get(),
 	})
 }
