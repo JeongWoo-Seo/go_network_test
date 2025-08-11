@@ -25,7 +25,7 @@ func NewCmd(filePath string) *Cmd {
 	c.service = service.NewService(c.repository)
 	c.network = network.NewNetwork(c.service)
 
-	fmt.Println("server start", c.config.Server.Port)
+	fmt.Println("server start..", c.config.Server.Port)
 	c.network.ServerStart(c.config.Server.Port)
 
 	return c
